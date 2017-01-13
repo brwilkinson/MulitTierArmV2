@@ -137,9 +137,11 @@
     }
   },
   "variables": {
-    // Global
+    // Global  BRWDev101
     "Deployment": "[concat(parameters('Prefix'),parameters('Environment'),parameters('DeploymentID'))]",
-    //"rgName": "[concat('rg', variables('Deployment'))]",
+
+    // saBRWDev101
+    // sabrwdev101
     "saName": "[toLower(concat('sa', variables('Deployment')))]",
 
     // SubDeployments
@@ -164,6 +166,8 @@
     "Domain": "[split(parameters('vmDomainName'),'.')[0]]",
 
     // DC1
+    //  vmBRWDev01DC1
+    //  vmBRWDev02DC1
     "DC1vmName": "[concat('vm', variables('Deployment'),'DC1')]",
     "DC1vmOSDiskName": "[concat(variables('DC1vmName'),'_vmOSDisk')]",
     "DC1vmDataDiskName": "[concat(variables('DC1vmName'),'_vmDataDisk')]",
